@@ -3,8 +3,12 @@ let count = 0
 const noBtn = document.getElementById("noBtn");
 const pressedBtn = document.getElementById("pressed");
 
-let currentWith = noBtn.offsetWidth;
-let currentHeight = noBtn.offsetHeight;
+let noBtncurrentWith = noBtn.offsetWidth;
+let noBtncurrentHeight = noBtn.offsetHeight;
+let yesBtncurrentWidth = yesBtn.offsetWidth;
+let yesBtncurrentHeight = yesBtn.offsetHeight;
+
+let yesBtncurrentFontSize = parseFloat(window.getComputedStyle(noBtn).getPropertyValue("font-size"));
 
 
 function yesFunction() {
@@ -14,11 +18,21 @@ function yesFunction() {
 noBtn.addEventListener('click', () => {
     count++;
     
-    pressedBtn.textContent = "Button Pressed";
-
     console.log(count);
 
-    currentWith += 1000;
-    currentHeight += 12;
+    noBtncurrentWith += 12;
+    noBtncurrentHeight += 12;
+
+    yesBtncurrentWidth -= 12;
+    yesBtncurrentHeight -= 12;
+    yesBtncurrentFontSize -= 12;
+
+    noBtn.style.width = `${noBtncurrentWith}px`;
+    noBtn.style.height = `${noBtncurrentHeight}px`;
+
+    yesBtn.style.width = `${yesBtncurrentWidth}px`;
+    yesBtn.style.height = `${yesBtncurrentHeight}px`;
+    yesBtn.style.fontSize = `${yesBtncurrentFontSize}px`;
+
 
 });
