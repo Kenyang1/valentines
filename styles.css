@@ -6,22 +6,24 @@ body {
     background-color: #f4f4f4;
 }
 
-header {
-    background-color: #333;
-    color: white;
-    padding: 20px;
-}
-
-button {
+.btn {
+    background-color: aqua;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #007BFF;
     color: white;
     border: none;
     border-radius: 5px;
 }
 
-button:hover {
-    background-color: #0056b3;
+#noBtn {
+    background-color: rgb(216, 96, 96);
+}
+
+#yesBtn {
+    background-color: rgb(110, 212, 130);
+}
+img {
+    width: auto;
+    height: 250px;
 }
